@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electric Car Store</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="./assets/img/f1.png" type="image/x-icon"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div
-      class="menu-button" id="menuButton"  onclick="toggleMenu()"  style="color: aliceblue">☰</div>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+    <title>TimCollection</title>
+  </head>
+  <body>
+    <nav class="navbar-xl">
+    <div class="menu-button" id="menuButton" onclick="toggleMenu()" style="color: aliceblue">☰</div>
     <div class="side-menu" id="sideMenu">
-      <a
-        href="javascript:void(0)"
-        class="closebtn"
-        id="closeButton"
-        onclick="toggleMenu()"
-        >×</a
-      >
-      <a href="#">Inicio</a>
-      <a href="#">Galería</a>
-      <a href="#">Quiénes Somos</a>
-      <a href="#">Productos</a>
-      <a href="#">Contáctanos</a>
+      <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="toggleMenu()">×</a>
+      <a href="#inicio"><img src="./assets/img/logo.png" alt="logo" style="width: 50%; padding: 1em;"></a>
+      <a href="#inicio">Inicio</a>
+      <a href="#quienesomos">Quiénes Somos</a>
+      <a href="#galeria">Galería</a>      
+      <a href="#productos">Productos</a>
+      <a href="#rrss">Encuentranos en RRSS</a>
     </div>
     <script>
       function toggleMenu() {
@@ -42,73 +38,177 @@
           closeButton.style.display = "none";
         }
       }
-
       // Inicializar el botón de cierre como oculto
       document.getElementById("closeButton").style.display = "none";
     </script>
+    </nav>
 
-    <!-- 
-    <div class="nieve1">
-      <img class="nieve" src="./img/nievegif.gif" alt="">
-    </div>    -->
+    <nav id="top" class="navbar">
+      <img src="./assets/img/logo.png" alt="logo" style="width: 30%;">
+      <ul>
+        
+        <li><a href="#inicio"><p>Inicio</p></a></li>
+        <li><a href="#quienesomos"><p>Quiénes Somos</p></a></li>
+        <li><a href="#galeria"><p>Galería</p></a></li>
+        <li><a href="#productos"><p>Productos</p></a></li>
+        <li><a href="#rrss"><p>RRSS</p></a></li>
+      </ul>
+    </nav>
+
+    
+       
+    
+    <header id="inicio" class="inicio">
+      <!-- <div class="nieve1">
+        <img class="nieve" src="./assets/img/nievegif.gif" alt="">
+      </div> -->
+      <h1>TimCollection</h1>      
+      <img class="img0" src="./assets/img/Diseño sin título (6).png" alt="timburton">
+      
+    </header>
+    
+
+    <main id="quienesomos" class="quienesomos">
+      <h2>Quiénes Somos</h2>
+      <p>
+        Bienvenido a Timcollection, tu destino número uno para figuras
+        coleccionables. Nos especializamos en traer a la vida los personajes
+        icónicos de las películas de Tim Burton, ofreciendo piezas únicas que
+        capturan la esencia y magia de sus clásicos atemporales. Nuestro
+        equipo está formado por apasionados coleccionistas y amantes del cine
+        que entienden la emoción de poseer una figura detallada y de alta
+        calidad. Nos esforzamos por proporcionar un servicio excepcional y una
+        experiencia de compra incomparable, asegurando que cada figura que
+        ofrecemos sea un tesoro para nuestros clientes. En Timcollection,
+        creemos que cada colección es especial y estamos
+        comprometidos a ayudarte a encontrar esa pieza perfecta que complete
+        la tuya. Explora nuestro catálogo y descubre la maravilla de las
+        figuras coleccionables que tenemos para ofrecer. Gracias por
+        visitarnos y confiar en nosotros para enriquecer tu colección.
+      </p>
+    </main>
 
     <section>
-      <div class="muestras">
-        <div id="card1" class="card"><img class="galleria" src="./img/jack4.avif" alt="galleria"></div>
-        <div id="card2" class="card"><img class="galleria" src="./img/fondo A.jpg" alt="galleria"></div>
-        <div id="card3" class="card"><img class="galleria" src="./img/charlie.jpg" alt="galleria"></div>
-        <div id="card4" class="card"><img class="galleria" src="./img/vincent.jpg" alt="galleria"></div>
-        <div id="card5" class="card"><img class="galleria" src="./img/jack5.jpg" alt="galleria"></div>
-        <div id="card6" class="card"><img class="galleria" src="./img/tim burton.jpg" alt="galleria"></div>
-        <div id="card7" class="card"><img class="galleria" src="./img/beetlejuice.jpg" alt="galleria"></div>
-        <div id="card8" class="card"><img class="galleria" src="./img/coraline-52ed7d8fe98af.jpg" alt="galleria"></div>
-        <div id="card9" class="card"><img class="galleria" src="./img/cadaver.png" alt="galleria"></div>
-        <div id="card10" class="card"><img class="galleria" src="./img/frankewinnie2.avif" alt="galleria"></div>
+      <div id="galeria" class="muestras">
+        <div id="card1" class="card">
+          <img class="galleria" src="./assets/img/jack4.avif" alt="galleria" />
+        </div>
+        <div id="card2" class="card">
+          <img class="galleria" src="./assets/img/fondo A.jpg" alt="galleria" />
+        </div>
+        <div id="card3" class="card">
+          <img class="galleria" src="./assets/img/charlie.jpg" alt="galleria" />
+        </div>
+        <div id="card4" class="card">
+          <img class="galleria" src="./assets/img/vincent.jpg" alt="galleria" />
+        </div>
+        <div id="card5" class="card">
+          <img class="galleria" src="./assets/img/jack5.jpg" alt="galleria" />
+        </div>
+        <div id="card6" class="card">
+          <img class="galleria" src="./assets/img/tim burton.jpg" alt="galleria" />
+        </div>
+        <div id="card7" class="card">
+          <img class="galleria" src="./assets/img/beetlejuice.jpg" alt="galleria" />
+        </div>
+        <div id="card8" class="card">
+          <img class="galleria" src="./assets/img/coraline-52ed7d8fe98af.jpg" alt="galleria" />
+        </div>
+        <div id="card9" class="card">
+          <img class="galleria" src="./assets/img/cadaver.png" alt="galleria" />
+        </div>
+        <div id="card10" class="card">
+          <img class="galleria" src="./assets/img/frankewinnie2.avif" alt="galleria" />
+        </div>
       </div>
-      <div class="contenedor">
+     
+      <div id="productos" class="contenedor">
         <div class="tarjeta" onclick="this.classList.toggle('rotar')">
           <div class="cara caraTrasera">
-            <h4 class="textos">
-              Figura Coleccionable de Jack Skellington - The Nightmare Before
-              Christmas
-            </h4>
-            <p class="textos">
-              Figura coleccionable de edición limitada, de la pelicula "The
-              Nightmare Before Christmas", captura con precisión todos los
-              detalles del icónico personaje de Tim Burton. Fabricada con
-              materiales de alta calidad, es una pieza destacada que añade un
-              toque especial a cualquier colección. Con un diseño meticuloso y
-              un acabado duradero
-            </p>
+            <img class="imgtrasera" src="./assets/img/3.jpg" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/5.webp" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/2.webp" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/4.webp" alt="producto2" />
           </div>
           <div class="cara caraFrontal">
-            <img src="./img/jack1.jpg" alt="producto1">
-            <h3>Figura de Jack Skellington</h3>
-            <button class="boton">Ver más</button>
+            <img class="imgfrontal" src="./assets/img/jack1.jpg" alt="producto1" />
+            <h5>
+              Figuras Coleccionable de Jack Skellington 
+            </h5>
+            <button class="boton">catálogo</button>
+          </div>
+        </div>
+        <div class="tarjeta" onclick="this.classList.toggle('rotar')">
+          <div class="cara caraTrasera">
+            <img class="imgtrasera" src="./assets/img/17.webp" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/18.webp" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/16.webp" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/15.webp" alt="producto2" />
+          </div>
+          <div class="cara caraFrontal">
+            <img class="imgfrontal" src="./assets/img/14.webp" alt="producto2" />
+            <h5>
+              Funko Pop! Coleccionable The Nightmare Before
+              Christmas
+            </h5>
+            <button class="boton">catálogo</button>
+          </div>
+        </div>
+        <div class="tarjeta" onclick="this.classList.toggle('rotar')">
+          <div class="cara caraTrasera">
+            <img class="imgtrasera" src="./assets/img/cor1.jpg" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/cor2.jpg" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/cor3.jpg" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/cor4.jpg" alt="producto2" />
+          </div>
+          <div class="cara caraFrontal">
+            <img class="imgfrontal" src="./assets/img/21.webp" alt="producto1" />
+            <h5>
+              Figuras Coleccionable de Coraline y la Puerta Secreta
+            </h5>
+            <button class="boton">catálogo</button>
+          </div>
+        </div>
+        <div class="tarjeta" onclick="this.classList.toggle('rotar')">
+          <div class="cara caraTrasera">
+            <img class="imgtrasera" src="./assets/img/1.a.webp" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/7.webp" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/8.webp" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/12.jpg" alt="producto2" />
+          </div>
+          <div class="cara caraFrontal">
+            <img class="imgfrontal" src="./assets/img/1.webp" alt="producto1" />
+            <h5>
+              Figuras Coleccionable The Nightmare Before
+              Christmas
+            </h5>
+            <button class="boton">catálogo</button>
+          </div>
+        </div>
+        <div class="tarjeta" onclick="this.classList.toggle('rotar')">
+          <div class="cara caraTrasera">
+            <img class="imgtrasera" src="./assets/img/19.jpg" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/22.jpg" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/23.jpg" alt="producto2" />
+            <img class="imgtrasera" src="./assets/img/24.webp" alt="producto2" />
+          </div>
+          <div class="cara caraFrontal">
+            <img class="imgfrontal" src="./assets/img/20.jpg" alt="producto1" />
+            <h5>
+              Figuras Coleccionable Otras películas
+            </h5>
+            <button class="boton">catálogo</button>
           </div>
         </div>
       </div>
     </section>
-    
-    
-        <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#card1" class="active">1</a>
-            <a href="#card2">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
-        
-    
-    </main> -->
-
-    <footer>
-        <div>
-        <img class="iconf" src="./assets/img/facebook.svg" alt="facebook" >
-        <img class="iconf" src="./assets/img/instagram.svg" alt="instagram">        
-    </div>
-        <h5>Todos los derechos reservados</h5>
-    </footer>
-
-
-</body>
+    <a href="#top" class="scroll-to-top">⬆ Subir</a>
+    <footer id="rrss">
+      <div>
+        <a href="https://www.instagram.com/ferfu.sunart/"><img class="iconf" src="./assets/img/instagram.svg" alt="instagram"></a>
+        <a href="https://web.facebook.com/Meta"><img class="iconf" src="./assets/img/facebook.svg" alt="facebook" ></a>              
+      </div>
+      <h5>TimCollection @ Todos los derechos reservados</h5>
+  </footer>
+  </body>
 </html>

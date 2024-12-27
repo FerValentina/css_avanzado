@@ -1,469 +1,588 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body{
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-nav{
-    grid-area: navbar;
-    background-color: rgb(204, 17, 17);
-    color: white;
-    padding: 1em;    
-    display: flex ;
-  
-    
+
+.inicio{ 
+grid-area: header;   
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;       
+margin: 4em 4em 0 4em;
+color: white;
+font-family: "Mountains of Christmas", serif;
+font-weight: 700;
+font-style: normal;
+font-size: xx-large;
+
 }
-h2{
-    font-family: "Racing Sans One", serif;
-    font-weight: 400;
-    font-style: normal;
-    
+.inicio h1{
+text-shadow: 
+2px 2px 1px rgb(0, 0, 0),
+4px 4px 1px rgb(42, 135, 32);
 }
+.img0{
+object-fit: cover;
+width: 250px;
+height: 350px;
+filter: sepia(80%);
+border-radius: 10em;  
+opacity: 0.8;
+transform: scale(150%);
+
+}
+
+
+/* .nieve{
+width: 100%;
+position: fixed;
+} */
+
+.quienesomos{
+grid-area: main;
+color: white;
+margin: 2em;
+padding: 2em;
+text-align: justify;
+background-color: rgba(38, 38, 38, 0.7);
+}
+.quienesomos h2{
+text-align: center;
+font-family: "Mountains of Christmas", serif;
+font-weight: 700;
+font-style: normal;
+font-size: xx-large;
+text-shadow: 
+2px 2px 1px rgb(0, 0, 0),
+3px 3px 1px rgb(42, 135, 32);
+}
+footer{
+grid-area: footer;
+height: 100px;  
+background-color: rgb(0, 0, 0);
+color: white;
+display: flex;
+flex-wrap: wrap;
+gap: 2px;
+align-items: center;
+padding: 10px;      
+font-family: "Mountains of Christmas", serif;
+font-weight: 700;
+font-style: normal;
+font-size: xx-large;
+}
+.iconf{
+width: 10%;
+}
+
+.scroll-to-top {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #333;
+color: white;
+padding: 10px 15px;
+border-radius: 50px;
+text-decoration: none;
+font-size: 14px;
+
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover{
+background-color: #555;
+}
+
+body:has(.scroll-to-top:target) .scroll-to-top {
+display: block;
+}
+
 
 @media (max-width: 576px ){
 
 
-    body{
-        display: grid;
-        grid-template-areas:
-          "navbar navbar"
-          "section section"
-          "main main"
-          'footer footer'
-        ;
-        grid-template-columns: 150px 1fr;
-        grid-template-rows: auto-fill 1fr 100px;
-        min-height: 100vh;
-        text-align: center;
-    }
-    nav{
-        justify-content: space-between;
-        align-items: center;
-    } 
-   .menu{
-        width: 10%;
-        
-    }
-    ul{
-        display: none;
-    }
-    .menu:hover{
-        background-color: rgba(128, 7, 7, 0.442);
-    }
-    
-    .logo{
-        width: 25%;
-        background-color: rgba(53, 1, 1, 0.011);
-        
-    }
-    section{
-        grid-area: section;
-        background-color: rgb(114, 112, 112);        
-        height: 80%;
-           
-    }
-    main{
-        grid-area: main;
-        background-color: white;
-        color: black;  
-        display: flex;  
-        flex-wrap: wrap;
-        gap: 2em;
-        justify-content: center;    
-        align-items: center;
-        margin-top: 1.5em;
-    
-        
-    }
-    
-    footer{
-        grid-area: footer;
-        background-color: rgb(145, 2, 2);
-        color: white;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
- 
-    .boton{
-        width: 70%;        
-        background-color: rgb(204, 17, 17);
-        color: white;
-        padding: 1em;
-        margin: 2.5em;
-        margin-left: 3em;
-        margin-right: 3em;
-        border-radius: 2em;
-    
-    }
-    .boton:hover{
-        background-color: rgb(148, 9, 9);
-        
-    }
-    
-    .buscador{
-        color: white;
-        margin: 0.5em;
-    
-    }
-    
-    #ordenar{
-        width: 70%;
-        background-color: white;
-        padding: 0.5em;
-        margin-left: 3em;
-        margin-right: 3em;
-        margin-bottom: 2em;
-        border-radius: 0.5em;
-        text-align: left;
-    }
-    .iconf{
-        width: 10%;
-    }
-    .pagination {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        list-style: none;
-    }
-    
-    .pagination a {
-        color: #007bff;
-        text-decoration: none;
-        padding: 10px 15px;
-        margin: 1em 5px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 14px;
-    }
-    
-    .pagination a:hover {
-        background-color: #007bff;
-        color: white;
-    }
-    
-    .pagination a.active {
-        background-color: #007bff;
-        color: white;
-        border: none;
-    }
-    #card2{
-        display: none;
-    }
-    }
+body{
+background-image: url(../img/fondo\ tim\ burton.jpg);
+
+display: grid;
+grid-template-areas:
+  "navbar navbar" 
+  "header header"
+  "main main"
+  "section section"
+  "footer footer";
+
+grid-template-columns: 150px 1fr;
+    grid-template-rows: auto-fill 1fr auto;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0;
+  } 
+.img0{
+display: none;
+}
+.navbar-xl{
+display: none;
+}
+.navbar{
+grid-area: navbar;
+background-color: rgb(36, 36, 36);
+color: rgb(255, 255, 255);
+padding: 1em;      
+display: flex ;
+justify-content: space-between;
+align-items: center;
+font-family: "Mountains of Christmas", serif;
+font-weight: 400;
+font-style: normal;
+font-size: medium; 
+
+}
+
+ul p:hover{
+color: aqua;
+}
+ul p{
+color: white;
+}
+ul{
+text-decoration: none;
+list-style: none;
+display: flex ;
+flex-wrap: wrap;
+gap: 5px;
+justify-content: space-around;
+line-height: 1px;
+}
+.inicio{
+grid-area: header;
+align-items: center;
+font-size: larger;
+justify-content: left;
+}
+.inicio h1{
+transform: scale(130%);
+}
+.quienesomos p{
+font-size: small;
+}
 
 
-@media (min-width: 576px ){
+section{
+grid-area: section;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
 
+}
+.contenedor {
+perspective: 300px;
+display: flex;
+flex-wrap: wrap;   
+justify-content: center; 
+margin: 0.5em 3em 3em 2em;
+gap: 1em ;
+}
+/* Distancia del ojo al plano -  cambiar de valor */
+.tarjeta:hover{
+transform: scale(70%);
+}
+.tarjeta {
+width: 8em;
+height: 15em;    
+border: 1px solid rgb(0, 0, 0);
+transform-style: preserve-3d;
+position: relative;
+transition: transform 0.6s;
+  /* animation: giro 3s infinite; */
+}
 
-    body{
-        display: grid;
-        grid-template-areas:
-          "navbar section"
-          "navbar main"
-          'footer main'
-        ;
-        grid-template-columns: 200px 1fr;
-        grid-template-rows: auto-fill 1fr 100px;
-        min-height: 100vh;
-        text-align: center;
-    }
-    nav{        
-        align-items: start;
-        gap: 4px    ;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .menu{
-        display: none;
-    }
-    h2{
-        font-size: medium;
-        padding-top: 0.5em;
-    }
-    ul{
-        list-style: none;
-        display: flex;        
-        flex-direction: column;
-        align-items: start;
-        gap: 0.7em;
-        
-    }
-    .logo{
-        width: 40%;
-        background-color: rgba(53, 1, 1, 0.011);
-        
-    }
-    section{
-        grid-area: section;
-        background-color: rgb(114, 112, 112);      
-        height: 80%;
-           
-    }
-    main{
-        grid-area: main;
-        background-color: white;
-        color: black;  
-        display: flex;  
-        flex-wrap: wrap;
-        gap: 2em;
-        justify-content: center;    
-        align-items: center;
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
-    
-        
-    }
-    
-    footer{
-        grid-area: footer;
-        background-color: rgb(145, 2, 2);
-        color: white;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-        align-items: center;
-        padding: 10px;
-    }
-    .card{
-        background-color: #F3F3F3;
-        width: 300px;
-        height: 400px;   
-        box-shadow: 2px 2px 5px 2px black;   
-        
-    }
-    .fotocar{
-        width: 90%;
-        height: 50%;            
-        margin-top: 1em;
-        margin-bottom: 1em;
-        border-radius: 1em;
-        
-    }
-    .boton{
-        width: 70%;        
-        background-color: rgb(204, 17, 17);
-        color: white;
-        padding: 1em;
-        margin: 1em;
-        margin-left: 3em;
-        margin-right: 3em;
-        border-radius: 2em;
-    
-    }
-    .boton:hover{
-        background-color: rgb(148, 9, 9);
-        
-    }
-    
-    .buscador{
-        color: white;
-        margin: 0.5em;
-    
-    }
- 
-    #ordenar{
-        width: 70%;
-        background-color: white;
-        padding: 0.5em;
-        margin-left: 3em;
-        margin-right: 3em;
-        margin-bottom: 2em;
-        border-radius: 0.5em;
-        text-align: left;
-    }
-    .iconf{
-        width: 20%;
-    }
-    .pagination {
-        display: none;
-    }
-    
-    } */
+.tarjeta.rotar {
+transform: rotateY(180deg);
+}
+
+.cara {
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+flex-wrap: wrap;    
+justify-content: center;
+align-items: center;
+backface-visibility: hidden;
+box-shadow: 4px 4px 1px rgb(0, 0, 0);
+}
+
+.caraFrontal {    
+color: white;
+font-size: 12px;
+background-color: rgba(0, 0, 0, 0.8);
+filter: grayscale(70%);
+text-align: center; 
+letter-spacing: 1px;
+}
+
+.caraTrasera {
+color: white;    
+background-color: rgba(0, 0, 0, 0.8);
+filter: grayscale(70%);         
+transform: rotateY(180deg);
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.imgtrasera{  
+width: 50px;
+height: 75px;
+object-fit: cover;
+object-position: center;
+} 
+.imgfrontal{
+margin-top: 5px;
+width: 91px;
+height: 110px;  
+object-position: center;
+}
+.boton{
+width: 50%;           
+background-color: rgb(255, 255, 255);
+color: rgb(2, 2, 2);
+padding: 0.4em;
+margin-bottom: 5px;
+margin-left: 2px;
+margin-right: 2px;
+border-radius: 2em;
+font-family: "Mountains of Christmas", serif;
+font-weight: 400;
+font-style: normal;
+font-size: small;
+text-shadow: 1px 1px 1px rgb(42, 135, 32);
+box-shadow: 1px 1px 1px rgb(42, 135, 32);
+}
+.boton:hover{
+background-color: aqua;
+transform: scale(110%);
+
+}
 
 
 
+@keyframes giro {
+0% {
+transform: rotateY(0deg);
+}
+50% {
+transform: rotateY(180deg);
+}
+100% {
+transform: rotateY(360deg);
+}
+}
 
-     
- body{
-    background-image: url(./img/Fondo\ B.jpg);
-    /* opacity: 0.8; */
-    /* width: 100vh;
-    height: 100vh; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.muestras{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 2em;
+padding-left: 2em;
+padding-right: 2em;
+margin: 5em 2em 4em 2em;
+}
+.card{    
+width: 250px;
+height: 250px;   
+box-shadow: 2px 2px 5px 2px black;  
+border-radius: 1em; 
+
+}
+.card:hover{
+transform: scale(110%);
+transition: ease-in-out;
+transition-delay: 20ms;  
+
+}
+.card:active{    
+filter: invert(80%);
+
+}
+
+.galleria{
+width: 250px;
+height: 250px;
+object-fit: cover;
+object-position: left;         
+border-radius: 1em;
+}
+.galleria:hover{
+filter: sepia(80%);
+transition: ease-in-out;
+transition-delay: 100ms;  
+
+}
+footer{
+grid-area: footer;  
+align-content: center;
+height: 150px;
+}
+footer img{
+transform: scale(70%);
+margin: 0%;
+}
+footer h5{
+transform: scale(50%);
+margin: 0;
+}
+}
+@media (min-width: 576px){
+body{
+background-image: url(../img/Fondo\ B.jpg);
+display: grid;
+grid-template-areas: 
+  "header header"
+  "main main"
+  "section section"
+  "footer footer";
+
+grid-template-columns: 150px 1fr;
+    grid-template-rows: auto-fill 1fr auto;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0;
     
-    
-    
-  }
+}
+.navbar{
+display: none;
+}
+.scroll-to-top{
+display: none;
+}
+
+/* menu lateral patanlla grande */
+
+/* Estilos básicos para el botón del menú */
+.menu-button {
+font-size: 30px;
+cursor: pointer;
+margin: 20px;
+position: fixed;
+top: 0;
+left: 0;
+}
+
+/* Estilos para el menú lateral */
+.side-menu {
+height: 100%;
+width: 0;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #383838;
+opacity: 0.8;
+overflow-x: hidden;
+transition: width 0.5s;
+padding-top: 60px;
+color: white;
+z-index: 1;
+font-family: "Mountains of Christmas", serif;
+font-weight: 400;
+font-style: normal;
+font-size: xx-large;
+}
+
+/* Estilos para los enlaces dentro del menú lateral */
+.side-menu a {
+padding: 10px 15px;
+text-decoration: none;
+font-size: 25px;
+color: #ffffff;
+display: block;
+transition: color 0.6s;
+}
+
+/* Cambia el color del enlace al pasar el ratón */
+.side-menu a:hover {
+color: #f1f1f1;
+}
+
+/* Estilo para abrir el menú */
+.side-menu.open {
+width: 250px;
+}
+
+/* Estilos para el botón de cierre dentro del menú */
+.side-menu .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+}
+
+section{
+grid-area: section;
+display: flex;
+flex-wrap: wrap;
+gap: 2em;
+  justify-content: center;
+  align-items: center;
   
-    /* Fondo version mobile
-  body{
-    background-image: url(./img/fondo\ tim\ burton.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-  } */
-  
-  
-  /* menu latera patanlla grande */
-  
-   /* Estilos básicos para el botón del menú */
-   .menu-button {
-      font-size: 30px;
-      cursor: pointer;
-      margin: 20px;
-    }
-  
-    /* Estilos para el menú lateral */
-    .side-menu {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #383838;
-      opacity: 0.8;
-      overflow-x: hidden;
-      transition: width 0.5s;
-      padding-top: 60px;
-      color: white;
-      z-index: 1;
-    }
-  
-    /* Estilos para los enlaces dentro del menú lateral */
-    .side-menu a {
-      padding: 10px 15px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #ffffff;
-      display: block;
-      transition: color 0.6s;
-    }
-  
-    /* Cambia el color del enlace al pasar el ratón */
-    .side-menu a:hover {
-      color: #f1f1f1;
-    }
-  
-    /* Estilo para abrir el menú */
-    .side-menu.open {
-      width: 250px;
-    }
-  
-    /* Estilos para el botón de cierre dentro del menú */
-    .side-menu .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-    }
-  
-  
-    /* .nieve{
-      width: 100%;
-    } */
-  section{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-  }
-    .contenedor {
-      perspective: 300px;
-    }
-    /* Distancia del ojo al plano -  cambiar de valor */
-  
-    .tarjeta {
-      width: 18em;
-      height: 30em;
-      border: 1px solid rgb(0, 0, 0);
-      transform-style: preserve-3d;
-      position: relative;
-      transition: transform 0.6s;
-      /* animation: giro 3s infinite; */
-    }
-  
-    .tarjeta.rotar {
-      transform: rotateY(180deg);
-    }
-  
-    .cara {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      backface-visibility: hidden;
-      box-shadow: 4px 4px 1px rgb(0, 0, 0);
-    }
-  
-    .caraFrontal {    
-      color: white;
-      background-color: rgba(0, 0, 0, 0.8);
-      filter: grayscale(70%);
-    }
-  
-    .caraTrasera {
-      text-align: center;    
-      /* line-height: 1em; */
-      letter-spacing: 1px;
-      align-items: center;
-      background-color: rgba(255, 255, 255, 0.5);
-      transform: rotateY(180deg);
-    }
-    
-  .textos{
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-    @keyframes giro {
-      0% {
-        transform: rotateY(0deg);
-      }
-      50% {
-        transform: rotateY(180deg);
-      }
-      100% {
-        transform: rotateY(360deg);
-      }
-    }
-  
-    .muestras{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2em;
-      padding-left: 2em;
-      padding-right: 2em;
-      margin: 5em 2em 4em 2em;
-    }
-    .card{
-      /* margin: 4em; */
-      width: 250px;
-      height: 250px;   
-      box-shadow: 2px 2px 5px 2px black;  
-      border-radius: 1em; 
-      
-  }
-  
-  .galleria{
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    object-position: left;  
-         
-    /* background-color: #F3F3F3;     */
-    /* padding-top: 4em; */
-    /* margin-top: 1em;
-    margin-bottom: 1em; */
-    border-radius: 1em;
-  }
+}
+.contenedor {
+perspective: 300px;
+display: flex;
+flex-wrap: wrap;
+gap: 1em;
+margin: 0.5em 3em 3em 2em;
+}
+/* Distancia del ojo al plano -  cambiar de valor */
+.tarjeta:hover{
+transform: scale(110%);
+}
+.tarjeta {
+width: 16em;
+height: 24em;
+border: 1px solid rgb(0, 0, 0);
+transform-style: preserve-3d;
+position: relative;
+transition: transform 0.6s;
+/* animation: giro 3s infinite; */
+}
+
+.tarjeta.rotar {
+transform: rotateY(180deg);
+}
+
+.cara {
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+backface-visibility: hidden;
+box-shadow: 4px 4px 1px rgb(0, 0, 0);
+}
+
+.caraFrontal {    
+color: white;
+background-color: rgba(0, 0, 0, 0.8);
+filter: grayscale(70%);
+text-align: center; 
+letter-spacing: 1px;
+}
+
+.caraTrasera {
+color: white;
+background-color: rgba(0, 0, 0, 0.8);
+filter: grayscale(70%);         
+transform: rotateY(180deg);
+display: flex;
+flex-wrap: wrap;
+gap: 2px;
+}
+
+.imgtrasera{  
+width: 100px;
+height: 150px;
+object-fit: cover;
+object-position: center;
+} 
+.imgfrontal{
+margin-top: 10px;
+width: 183px;
+height: 220px;  
+object-position: center;
+}
+.boton{
+width: 90%;           
+background-color: rgb(255, 255, 255);
+color: rgb(2, 2, 2);
+padding: 0.4em;
+margin-bottom: 1em;
+margin-left: 2em;
+margin-right: 2em;
+border-radius: 2em;
+font-family: "Mountains of Christmas", serif;
+font-weight: 400;
+font-style: normal;
+font-size: x-large;
+text-shadow: 1px 1px 1px rgb(42, 135, 32);
+box-shadow: 1px 1px 1px rgb(42, 135, 32);
+}
+.boton:hover{
+background-color: aqua;
+transform: scale(110%);
+
+}
+
+
+
+@keyframes giro {
+0% {
+transform: rotateY(0deg);
+}
+50% {
+transform: rotateY(180deg);
+}
+100% {
+transform: rotateY(360deg);
+}
+}
+
+.muestras{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 2em;
+padding-left: 2em;
+padding-right: 2em;
+margin: 5em 2em 4em 2em;
+}
+.card{
+/* margin: 4em; */
+width: 250px;
+height: 250px;   
+box-shadow: 2px 2px 5px 2px black;  
+border-radius: 1em; 
+
+}
+.card:hover{
+transform: scale(110%);
+transition: ease-in-out;
+transition-delay: 20ms;  
+
+}
+.card:active{    
+filter: invert(80%);
+
+}
+
+.galleria{
+width: 250px;
+height: 250px;
+object-fit: cover;
+object-position: left;         
+border-radius: 1em;
+}
+.galleria:hover{
+filter: sepia(80%);
+transition: ease-in-out;
+transition-delay: 100ms;  
+
+}
+.img0:hover{
+transform: scale(180%);
+filter: brightness(200%);
+}
+.inicio h1:hover{
+transform: scale(140%);
+}
+}
