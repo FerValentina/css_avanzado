@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -58,9 +58,7 @@ h2{
     }
     section{
         grid-area: section;
-        background-color: rgb(114, 112, 112);
-        /* text-align: left; */
-        /* padding-top: 1em; */
+        background-color: rgb(114, 112, 112);        
         height: 80%;
            
     }
@@ -89,26 +87,9 @@ h2{
         align-items: center;
         padding: 10px;
     }
-    .card{
-        background-color: #F3F3F3;
-        width: 300px;
-        height: 400px;   
-        box-shadow: 2px 2px 5px 2px black;   
-        
-    }
-    .fotocar{
-        width: 90%;
-        height: 50%;     
-        /* background-color: #F3F3F3;     */
-        /* padding-top: 4em; */
-        margin-top: 1em;
-        margin-bottom: 1em;
-        border-radius: 1em;
-        
-    }
+ 
     .boton{
-        width: 70%;
-        /* height: auto; */
+        width: 70%;        
         background-color: rgb(204, 17, 17);
         color: white;
         padding: 1em;
@@ -218,9 +199,7 @@ h2{
     }
     section{
         grid-area: section;
-        background-color: rgb(114, 112, 112);
-        /* text-align: left; */
-        /* padding-top: 1em; */
+        background-color: rgb(114, 112, 112);      
         height: 80%;
            
     }
@@ -258,17 +237,14 @@ h2{
     }
     .fotocar{
         width: 90%;
-        height: 50%;     
-        /* background-color: #F3F3F3;     */
-        /* padding-top: 4em; */
+        height: 50%;            
         margin-top: 1em;
         margin-bottom: 1em;
         border-radius: 1em;
         
     }
     .boton{
-        width: 70%;
-        /* height: auto; */
+        width: 70%;        
         background-color: rgb(204, 17, 17);
         color: white;
         padding: 1em;
@@ -306,4 +282,188 @@ h2{
         display: none;
     }
     
+    } */
+
+
+
+
+     
+ body{
+    background-image: url(./img/Fondo\ B.jpg);
+    /* opacity: 0.8; */
+    /* width: 100vh;
+    height: 100vh; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+    
+  }
+  
+    /* Fondo version mobile
+  body{
+    background-image: url(./img/fondo\ tim\ burton.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  } */
+  
+  
+  /* menu latera patanlla grande */
+  
+   /* Estilos básicos para el botón del menú */
+   .menu-button {
+      font-size: 30px;
+      cursor: pointer;
+      margin: 20px;
     }
+  
+    /* Estilos para el menú lateral */
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #383838;
+      opacity: 0.8;
+      overflow-x: hidden;
+      transition: width 0.5s;
+      padding-top: 60px;
+      color: white;
+      z-index: 1;
+    }
+  
+    /* Estilos para los enlaces dentro del menú lateral */
+    .side-menu a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #ffffff;
+      display: block;
+      transition: color 0.6s;
+    }
+  
+    /* Cambia el color del enlace al pasar el ratón */
+    .side-menu a:hover {
+      color: #f1f1f1;
+    }
+  
+    /* Estilo para abrir el menú */
+    .side-menu.open {
+      width: 250px;
+    }
+  
+    /* Estilos para el botón de cierre dentro del menú */
+    .side-menu .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+    }
+  
+  
+    /* .nieve{
+      width: 100%;
+    } */
+  section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+  }
+    .contenedor {
+      perspective: 300px;
+    }
+    /* Distancia del ojo al plano -  cambiar de valor */
+  
+    .tarjeta {
+      width: 18em;
+      height: 30em;
+      border: 1px solid rgb(0, 0, 0);
+      transform-style: preserve-3d;
+      position: relative;
+      transition: transform 0.6s;
+      /* animation: giro 3s infinite; */
+    }
+  
+    .tarjeta.rotar {
+      transform: rotateY(180deg);
+    }
+  
+    .cara {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      backface-visibility: hidden;
+      box-shadow: 4px 4px 1px rgb(0, 0, 0);
+    }
+  
+    .caraFrontal {    
+      color: white;
+      background-color: rgba(0, 0, 0, 0.8);
+      filter: grayscale(70%);
+    }
+  
+    .caraTrasera {
+      text-align: center;    
+      /* line-height: 1em; */
+      letter-spacing: 1px;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.5);
+      transform: rotateY(180deg);
+    }
+    
+  .textos{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+    @keyframes giro {
+      0% {
+        transform: rotateY(0deg);
+      }
+      50% {
+        transform: rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+  
+    .muestras{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+      padding-left: 2em;
+      padding-right: 2em;
+      margin: 5em 2em 4em 2em;
+    }
+    .card{
+      /* margin: 4em; */
+      width: 250px;
+      height: 250px;   
+      box-shadow: 2px 2px 5px 2px black;  
+      border-radius: 1em; 
+      
+  }
+  
+  .galleria{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: left;  
+         
+    /* background-color: #F3F3F3;     */
+    /* padding-top: 4em; */
+    /* margin-top: 1em;
+    margin-bottom: 1em; */
+    border-radius: 1em;
+  }

@@ -11,66 +11,84 @@
 <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <img class="logo" src="./assets/img/f1.png" alt="f1">
-        <h2>F1 Collection</h2>
-        <img class="menu" src="./assets/img/menu.svg" alt="menu">
-        <div>
-            <ul class="lista">
-                <li>Inicio</li>
-                <li>Catálogo</li>
-                <li>Ofertas</li>
-                <li>Contacto</li>
-            </ul>
-        </div>
-    </nav>
+    <div
+      class="menu-button" id="menuButton"  onclick="toggleMenu()"  style="color: aliceblue">☰</div>
+    <div class="side-menu" id="sideMenu">
+      <a
+        href="javascript:void(0)"
+        class="closebtn"
+        id="closeButton"
+        onclick="toggleMenu()"
+        >×</a
+      >
+      <a href="#">Inicio</a>
+      <a href="#">Galería</a>
+      <a href="#">Quiénes Somos</a>
+      <a href="#">Productos</a>
+      <a href="#">Contáctanos</a>
+    </div>
+    <script>
+      function toggleMenu() {
+        const sideMenu = document.getElementById("sideMenu");
+        const menuButton = document.getElementById("menuButton");
+        const closeButton = document.getElementById("closeButton");
+
+        sideMenu.classList.toggle("open");
+        if (sideMenu.classList.contains("open")) {
+          menuButton.style.display = "none";
+          closeButton.style.display = "block";
+        } else {
+          menuButton.style.display = "block";
+          closeButton.style.display = "none";
+        }
+      }
+
+      // Inicializar el botón de cierre como oculto
+      document.getElementById("closeButton").style.display = "none";
+    </script>
+
+    <!-- 
+    <div class="nieve1">
+      <img class="nieve" src="./img/nievegif.gif" alt="">
+    </div>    -->
+
     <section>
-        <p class="buscador">Ordenar Por:</p>
-        <!-- <div class="boxbuscador">Precio</div> -->
-        
-         <label for="ordenar"></label>
-         <select name="ordenar" id="ordenar">
-            <option value="Precio">Precio</option>
-            <option value="Nombre">Nombre</option>
-            <option value="Equipo">Equipo</option>
-            <option value="Tamaño">Tamaño</option>
-         </select>
+      <div class="muestras">
+        <div id="card1" class="card"><img class="galleria" src="./img/jack4.avif" alt="galleria"></div>
+        <div id="card2" class="card"><img class="galleria" src="./img/fondo A.jpg" alt="galleria"></div>
+        <div id="card3" class="card"><img class="galleria" src="./img/charlie.jpg" alt="galleria"></div>
+        <div id="card4" class="card"><img class="galleria" src="./img/vincent.jpg" alt="galleria"></div>
+        <div id="card5" class="card"><img class="galleria" src="./img/jack5.jpg" alt="galleria"></div>
+        <div id="card6" class="card"><img class="galleria" src="./img/tim burton.jpg" alt="galleria"></div>
+        <div id="card7" class="card"><img class="galleria" src="./img/beetlejuice.jpg" alt="galleria"></div>
+        <div id="card8" class="card"><img class="galleria" src="./img/coraline-52ed7d8fe98af.jpg" alt="galleria"></div>
+        <div id="card9" class="card"><img class="galleria" src="./img/cadaver.png" alt="galleria"></div>
+        <div id="card10" class="card"><img class="galleria" src="./img/frankewinnie2.avif" alt="galleria"></div>
+      </div>
+      <div class="contenedor">
+        <div class="tarjeta" onclick="this.classList.toggle('rotar')">
+          <div class="cara caraTrasera">
+            <h4 class="textos">
+              Figura Coleccionable de Jack Skellington - The Nightmare Before
+              Christmas
+            </h4>
+            <p class="textos">
+              Figura coleccionable de edición limitada, de la pelicula "The
+              Nightmare Before Christmas", captura con precisión todos los
+              detalles del icónico personaje de Tim Burton. Fabricada con
+              materiales de alta calidad, es una pieza destacada que añade un
+              toque especial a cualquier colección. Con un diseño meticuloso y
+              un acabado duradero
+            </p>
+          </div>
+          <div class="cara caraFrontal">
+            <img src="./img/jack1.jpg" alt="producto1">
+            <h3>Figura de Jack Skellington</h3>
+            <button class="boton">Ver más</button>
+          </div>
+        </div>
+      </div>
     </section>
-    <main>
-        
-        <div id="card1" class="card"><img class="fotocar" src="./assets/img/redbull1.avif" alt="redbull1">
-            <h3>Red Bull Racing Car</h3>
-            <button class="boton">Ver más</button>
-            
-        </div>
-        <div id="card2" class="card"><img class="fotocar" src="./assets/img/redbull1.avif" alt="redbull1">
-            <h3>Red Bull Racing Car</h3>
-            <button class="boton">Ver más</button>
-        </div>
-        <div id="card2" class="card"><img class="fotocar" src="./assets/img/redbull1.avif" alt="redbull1">
-            <h3>Red Bull Racing Car</h3>
-            <button class="boton">Ver más</button>
-        </div>
-        <div id="card2" class="card"><img class="fotocar" src="./assets/img/redbull1.avif" alt="redbull1">
-            <h3>Red Bull Racing Car</h3>
-            <button class="boton">Ver más</button>
-        </div>
-        <div id="card2" class="card"><img class="fotocar" src="./assets/img/redbull1.avif" alt="redbull1">
-            <h3>Red Bull Racing Car</h3>
-            <button class="boton">Ver más</button>
-        </div>
-        <div id="card2" class="card"><img class="fotocar" src="./assets/img/redbull1.avif" alt="redbull1">
-            <h3>Red Bull Racing Car</h3>
-            <button class="boton">Ver más</button>
-        </div>
-        <div id="card2" class="card"><img class="fotocar" src="./assets/img/redbull1.avif" alt="redbull1">
-            <h3>Red Bull Racing Car</h3>
-            <button class="boton">Ver más</button>
-        </div>
-        <div id="card2" class="card"><img class="fotocar" src="./assets/img/redbull1.avif" alt="redbull1">
-            <h3>Red Bull Racing Car</h3>
-            <button class="boton">Ver más</button>
-        </div>
     
     
         <div class="pagination">
@@ -81,7 +99,7 @@
             <a href="#">&raquo;</a>
         
     
-    </main>
+    </main> -->
 
     <footer>
         <div>
